@@ -54,7 +54,9 @@ ROOT_URLCONF = 'websiteproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates') # project-level 'templates'  directory
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -99,6 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+ACCOUNT_ACTIVATION_DAYS = 1
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
